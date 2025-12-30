@@ -1,0 +1,35 @@
+name: AntiVPNPlus
+main: rip.snake.antivpn.spigot.ServerAntiVPN
+version: ${project.version}
+api-version: "1.21"
+
+author: ItzzMateo
+authors:
+  - AntiVPN
+  - ItzzMateo
+  - DevFlareSuperGravityStudios
+
+description: >
+  Advanced Anti-VPN, Proxy and TOR protection for Purpur / Paper servers.
+  Blocks malicious connections in real time with minimal performance impact.
+
+website: https://github.com/itzzjustmateo/AntiVPNPlus
+
+softdepend:
+  - ViaVersion
+
+load: POSTWORLD
+
+commands:
+  antivpn:
+    description: Manage AntiVPNPlus settings and API token
+    aliases:
+      - savpn
+    permission: antivpn.command
+    permission-message: You do not have permission to use this command.
+    usage: /<command> [token]
+
+permissions:
+  antivpn.command:
+    description: Allows access to the AntiVPNPlus command
+    default: op
